@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="com.galilee.livre.model.Livre" table="livre" catalog="galilee">
+    	<id name="livreId" type="java.lang.Long">
+    		<column name="LIVRE_ID"/>
+    		<generator class="identity"/>
+    	</id>
+    	
+    	<property name="livreTitre" type="string">
+    		<column name="LIVRE_TITRE" not-null="true"/>
+    	</property>
+    	
+    	<property name="livreAuteur" type="string">
+    		<column name="LIVRE_AUTEUR" not-null="true"/>
+    	</property>
+    	
+    	<property name="livreCode" type="string">
+    		<column name="LIVRE_CODE" not-null="true"/>
+    	</property>
+    	
+    	<property name="livreNbrExemp" type="int">
+    		<column name="LIVRE_NBREXEMP" not-null="false"/>
+    	</property>
+    	
+    	<property name="livreNbrDispo" type="int">
+    		<column name="LIVRE_NBRDISPO" not-null="false"/>
+    	</property>
+    </class>
+</hibernate-mapping>

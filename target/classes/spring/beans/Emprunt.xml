@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+    <!-- Stock business object -->
+    <bean id="empruntBo" class="com.galilee.emprunt.bo.impl.EmpruntBoImpl">
+    	<property name="empruntDao" ref="empruntDao"/>
+    </bean>
+
+
+   <!-- Stock Data Access Object -->
+   <bean id="empruntDao" class="com.galilee.emprunt.dao.impl.EmpruntDaoImpl">
+   		<property name="sessionFactory" ref="sessionFactory"/>
+   </bean>
+
+
+</beans>

@@ -1,4 +1,4 @@
-package com.galilee.eqinovEvaluation;
+package com.galilee.bibliotheque;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

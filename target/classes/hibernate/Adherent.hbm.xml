@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="com.galilee.adherent.model.Adherent" table="adherent" catalog="galilee">
+    	<id name="adherentId" type="java.lang.Long">
+    		<column name="ADHERENT_ID"/>
+    		<generator class="identity"/>
+    	</id>
+    	
+    	<property name="adherentNom" type="string">
+    		<column name="ADHERENT_NOM" length="20" not-null="true"/>
+    	</property>
+    	
+    	<property name="adherentPrenom" type="string">
+    		<column name="ADHERENT_PRENOM" length="20" not-null="true"/>
+    	</property>
+    	
+    	<property name="adherentAdressePostal" type="string">
+    		<column name="ADHERENT_ADRESSEPOSTAL" length="20" not-null="true"/>
+    	</property>
+    	
+    	<property name="adherentAdresseMail" type="string">
+    		<column name="ADHERENT_ADRESSEMAIL" length="20" not-null="true"/>
+    	</property>
+    	
+    	<property name="adherentProfession" type="string">
+    		<column name="ADHERENT_PROFESSION" length="20" not-null="true"/>
+    	</property>
+    	
+    	<property name="adherentNbrEmprunt" type="int">
+    		<column name="ADHERENT_NBREMPRUNT" />
+    	</property>
+    </class>
+</hibernate-mapping>

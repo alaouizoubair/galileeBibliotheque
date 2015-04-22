@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="com.galilee.emprunt.model.Emprunt" table="emprunt" catalog="galilee">
+    	<id name="empruntId" type="java.lang.Long">
+    		<column name="EMPRUNT_ID"/>
+    		<generator class="identity"/>
+    	</id>
+    	
+    	<property name="empruntAdherentId" type="long">
+    		<column name="EMPRUNT_ADHERENT_ID" not-null="true"/>
+    	</property>
+    	
+    	<property name="empruntLivreId" type="long">
+    		<column name="EMPRUNT_LIVRE_ID" not-null="true"/>
+    	</property>
+    	
+    	<property name="empruntRetour" type="date">
+    		<column name="EMPRUNT_RETOUR" not-null="false"/>
+    	</property>
+    </class>
+</hibernate-mapping>
