@@ -71,5 +71,20 @@ public class Livre implements Serializable{
 		this.livreNbrDispo = livreNbrDispo;
 	}
 	
+	public String toString(){
+		String str = "Titre: "+livreTitre+
+					"\nAuteur: "+livreAuteur+
+					"\nCode: "+livreCode+
+					"\nNombre Exemplaire: "+livreNbrExemp+
+					"\nNombre Disponible"+livreNbrDispo+"\n";
+		return str;
+	}
+	
+	public String toString2(){
+		String str = "Titre: "+livreTitre+
+					"\nAuteur: "+livreAuteur+
+					"\nCode: "+livreCode+"\n";
+		return str;
+	}
 	
 }

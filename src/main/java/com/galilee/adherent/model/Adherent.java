@@ -1,6 +1,10 @@
 package com.galilee.adherent.model;
 
 import java.io.Serializable;
+import java.util.List;
+
+import com.galilee.emprunt.model.Emprunt;
+import com.galilee.livre.model.Livre;
 
 public class Adherent implements Serializable{
 	private static final long serialVersionId = 1L;
@@ -12,6 +16,9 @@ public class Adherent implements Serializable{
 	private String adherentAdresseMail;
 	private String adherentProfession;
 	private int adherentNbrEmprunt;
+	private List<Livre> adherentLivre;
+	private List<Emprunt> adherentEmprunt;
+	
 	
 	public Adherent(){}
 	
@@ -67,6 +74,29 @@ public class Adherent implements Serializable{
 	public void setAdherentNbrEmprunt(int adherentNbrEmprunt) {
 		this.adherentNbrEmprunt = adherentNbrEmprunt;
 	}
+
+	public List<Emprunt> getAdherentEmprunt() {
+		return adherentEmprunt;
+	}
+
+	public void setAdherentEmprunt(List<Emprunt> adherentEmprunt) {
+		this.adherentEmprunt = adherentEmprunt;
+	}
+
+	public List<Livre> getAdherentLivre() {
+		return adherentLivre;
+	}
+
+	public void setAdherentLivre(List<Livre> adherentLivre) {
+		this.adherentLivre = adherentLivre;
+	}
 	
+	public String toString(){
+		String str = "Nom: "+adherentNom+"\nPrenom: "+
+				adherentPrenom+"\nCode Postal: "+adherentAdressePostal+
+				"\nMail: "+adherentAdresseMail+"\nProfession: "+
+				adherentProfession+"\nNombre d'emprunt: "+adherentNbrEmprunt+"\n";
+		return str;
+	}
 	
 }

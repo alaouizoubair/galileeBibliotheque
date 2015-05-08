@@ -1,5 +1,7 @@
 package com.galilee.adherent.bo.impl;
 
+import java.util.List;
+
 import com.galilee.adherent.bo.AdherentBo;
 import com.galilee.adherent.dao.AdherentDao;
 import com.galilee.adherent.model.Adherent;
@@ -25,5 +27,13 @@ public class AdherentBoImpl implements AdherentBo{
 	
 	public Adherent findByAdherentId(Long adherentId){
 		return adherentDao.findByAdherentId(adherentId);
+	}
+	
+	public List<Adherent>  findByAdherentNbrEmprunt(Long adherentNbrEmprunt){
+		return adherentDao.findByAdherentNbrEmprunt(adherentNbrEmprunt);
+	}
+	
+	public List<Adherent> findAll(){
+		return adherentDao.findAll();
 	}
 }

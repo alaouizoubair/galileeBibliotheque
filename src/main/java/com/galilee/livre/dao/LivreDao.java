@@ -1,5 +1,6 @@
 package com.galilee.livre.dao;
 
+import java.util.List;
 import com.galilee.livre.model.Livre;
 
 public interface LivreDao {
@@ -7,5 +8,7 @@ public interface LivreDao {
 	void update(Livre livre);
 	void delete(Livre livre);
 	
+	Livre findByLivreId(Long livreId);
 	Livre findByLivreTitre(String livreTitre);
+	List<Livre> findAll();
 }

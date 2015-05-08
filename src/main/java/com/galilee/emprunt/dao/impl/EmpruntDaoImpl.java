@@ -26,5 +26,12 @@ public class EmpruntDaoImpl extends HibernateDaoSupport implements EmpruntDao{
 		
 		return (Emprunt)list.get(0);
 	}
+	
+	public List<Emprunt> findByEmpruntAdherentId(Long adherentId){
+		List list = getHibernateTemplate().find
+				("from Emprunt where empruntAdherentId="+adherentId);
+		
+		return (List<Emprunt>)list;
+	}
 
 }

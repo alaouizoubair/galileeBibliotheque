@@ -1,5 +1,7 @@
 package com.galilee.livre.bo.impl;
 
+import java.util.List;
+
 import com.galilee.livre.bo.LivreBo;
 import com.galilee.livre.dao.LivreDao;
 import com.galilee.livre.model.Livre;
@@ -25,5 +27,13 @@ public class LivreBoImpl implements LivreBo{
 	
 	public Livre findByLivreTitre(String livreTitre){
 		return livreDao.findByLivreTitre(livreTitre);
+	}
+	
+	public Livre findByLivreId(Long livreId){
+		return livreDao.findByLivreId(livreId);
+	}
+	
+	public List<Livre> findAll(){
+		return livreDao.findAll();
 	}
 }

@@ -1,5 +1,7 @@
 package com.galilee.emprunt.bo;
 
+import java.util.List;
+
 import com.galilee.emprunt.model.Emprunt;
 
 public interface EmpruntBo {
@@ -8,4 +10,5 @@ public interface EmpruntBo {
 	void delete(Emprunt emprunt);
 	
 	Emprunt findByEmpruntId(Long empruntId);
+	List<Emprunt> findByEmpruntAdherentId(Long adherentId);
 }

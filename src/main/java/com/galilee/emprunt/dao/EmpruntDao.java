@@ -1,5 +1,7 @@
 package com.galilee.emprunt.dao;
 
+import java.util.List;
+
 import com.galilee.emprunt.model.Emprunt;
 
 public interface EmpruntDao {
@@ -8,4 +10,5 @@ public interface EmpruntDao {
 	void delete(Emprunt emprunt);
 	
 	Emprunt findByEmpruntId(Long empruntId);
+	List<Emprunt> findByEmpruntAdherentId(Long adherentId);
 }

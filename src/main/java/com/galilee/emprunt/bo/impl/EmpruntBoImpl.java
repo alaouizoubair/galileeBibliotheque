@@ -1,5 +1,7 @@
 package com.galilee.emprunt.bo.impl;
 
+import java.util.List;
+
 import com.galilee.emprunt.bo.EmpruntBo;
 import com.galilee.emprunt.dao.EmpruntDao;
 import com.galilee.emprunt.model.Emprunt;
@@ -26,6 +28,10 @@ public class EmpruntBoImpl implements EmpruntBo{
 
 	public Emprunt findByEmpruntId(Long empruntId) {
 		return empruntDao.findByEmpruntId(empruntId);
+	}
+	
+	public  List<Emprunt> findByEmpruntAdherentId(Long adherentId){
+		return empruntDao.findByEmpruntAdherentId(adherentId);
 	}
 	
 }

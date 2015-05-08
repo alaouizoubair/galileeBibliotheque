@@ -1,5 +1,7 @@
 package com.galilee.adherent.dao;
 
+import java.util.List;
+
 import com.galilee.adherent.model.Adherent;
 
 public interface AdherentDao  {
@@ -8,4 +10,6 @@ public interface AdherentDao  {
 	void delete(Adherent adherent);
 	
 	Adherent findByAdherentId(Long adherentId);
+	List<Adherent>  findByAdherentNbrEmprunt(Long adherentNbrEmprunt);
+	List<Adherent> findAll();
 }

@@ -22,8 +22,22 @@ public class LivreDaoImpl extends HibernateDaoSupport implements LivreDao{
 	
 	public Livre findByLivreTitre(String livreTitre){
 		List list = getHibernateTemplate().find
-				("from Livre where livreTitre='" + livreTitre+"'" );
+				("from Livre where livreTitre like '%" + livreTitre+"%'" );
 		
 		return (Livre)list.get(0);
+	}
+	
+	public Livre findByLivreId(Long livreId){
+		List list = getHibernateTemplate().find
+				("from Livre where livreId =" + livreId );
+		
+		return (Livre)list.get(0);
+	}
+	
+	public List<Livre> findAll(){
+		List list = getHibernateTemplate().find
+				("from Livre"  );
+		
+		return list;
 	}
 }
