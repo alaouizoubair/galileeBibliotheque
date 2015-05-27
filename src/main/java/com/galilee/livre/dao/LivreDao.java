@@ -1,6 +1,7 @@
 package com.galilee.livre.dao;
 
 import java.util.List;
+
 import com.galilee.livre.model.Livre;
 
 public interface LivreDao {
@@ -11,4 +12,5 @@ public interface LivreDao {
 	Livre findByLivreId(Long livreId);
 	Livre findByLivreTitre(String livreTitre);
 	List<Livre> findAll();
+	int findTypeAccurence(String Type);
 }

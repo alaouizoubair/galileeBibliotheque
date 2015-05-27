@@ -20,5 +20,9 @@
     	<property name="empruntRetour" type="date">
     		<column name="EMPRUNT_RETOUR" not-null="false"/>
     	</property>
+    	
+    	<property name="empruntReturned" type="int">    		
+    		<column name="EMPRUNT_RETURNED" not-null="false"/>
+    	</property>
     </class>
 </hibernate-mapping>

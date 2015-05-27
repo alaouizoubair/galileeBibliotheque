@@ -92,7 +92,7 @@ public class Adherent implements Serializable{
 	}
 	
 	public String toString(){
-		String str = "Nom: "+adherentNom+"\nPrenom: "+
+		String str = "Id: "+adherentId+"\nNom: "+adherentNom+"\nPrenom: "+
 				adherentPrenom+"\nCode Postal: "+adherentAdressePostal+
 				"\nMail: "+adherentAdresseMail+"\nProfession: "+
 				adherentProfession+"\nNombre d'emprunt: "+adherentNbrEmprunt+"\n";

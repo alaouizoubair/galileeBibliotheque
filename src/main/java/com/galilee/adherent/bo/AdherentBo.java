@@ -10,6 +10,7 @@ public interface AdherentBo {
 	void delete(Adherent adherent);
 	
 	Adherent findByAdherentId(Long adherentId);
+	Adherent findByAdherentName(String adherentNom,String adherentPrenom);
 	List<Adherent>  findByAdherentNbrEmprunt(Long adherentNbrEmprunt);
 	List<Adherent> findAll();
 }

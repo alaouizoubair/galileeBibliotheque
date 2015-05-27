@@ -8,16 +8,18 @@ public class Livre implements Serializable{
 	private Long livreId;
 	private String livreTitre;
 	private String livreAuteur;
+	private String livreType;
 	private String livreCode;
 	private int livreNbrExemp;
 	private int livreNbrDispo;
 	
 	public Livre(){}
 	
-	public Livre(String livreTitre,String livreAuteur,String livreCode,
+	public Livre(String livreTitre,String livreAuteur,String livreType,String livreCode,
 			int livreNbrExemp,int livreNbrDispo){
 		this.livreTitre=livreTitre;
 		this.livreAuteur=livreAuteur;
+		this.livreType=livreType;
 		this.livreCode=livreCode;
 		this.livreNbrExemp=livreNbrExemp;
 		this.livreNbrDispo=livreNbrDispo;
@@ -71,6 +73,14 @@ public class Livre implements Serializable{
 		this.livreNbrDispo = livreNbrDispo;
 	}
 	
+	public String getLivreType() {
+		return livreType;
+	}
+
+	public void setLivreType(String livreType) {
+		this.livreType = livreType;
+	}
+
 	public String toString(){
 		String str = "Titre: "+livreTitre+
 					"\nAuteur: "+livreAuteur+
@@ -81,7 +91,7 @@ public class Livre implements Serializable{
 	}
 	
 	public String toString2(){
-		String str = "Titre: "+livreTitre+
+		String str = "Id: "+livreId+"\nTitre: "+livreTitre+
 					"\nAuteur: "+livreAuteur+
 					"\nCode: "+livreCode+"\n";
 		return str;

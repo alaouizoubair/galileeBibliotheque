@@ -29,6 +29,10 @@ public class AdherentBoImpl implements AdherentBo{
 		return adherentDao.findByAdherentId(adherentId);
 	}
 	
+	public Adherent findByAdherentName(String adherentNom,String adherentPrenom){
+		return adherentDao.findByAdherentName(adherentNom,adherentPrenom);
+	}
+	
 	public List<Adherent>  findByAdherentNbrEmprunt(Long adherentNbrEmprunt){
 		return adherentDao.findByAdherentNbrEmprunt(adherentNbrEmprunt);
 	}

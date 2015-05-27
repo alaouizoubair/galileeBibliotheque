@@ -12,6 +12,7 @@ public class Emprunt implements Serializable{
 	private Long empruntAdherentId;
 	private Long empruntLivreId;
 	private Date empruntRetour;
+	private int empruntReturned;
 	
 	public Emprunt(){}
 
@@ -55,6 +56,18 @@ public class Emprunt implements Serializable{
 		this.empruntRetour = empruntRetour;
 	}
 	
-	
+	public int getEmpruntReturned() {
+		return empruntReturned;
+	}
+
+	public void setEmpruntReturned(int empruntReturned) {
+		this.empruntReturned = empruntReturned;
+	}
+
+	public String toString(){
+		String str = "Id: "+empruntId+"\nAdherent: "+empruntAdherentId+"\nLivre: "+
+				empruntLivreId+"\nDate Retour: "+empruntRetour+"\n";
+		return str;
+	}
 	
 }

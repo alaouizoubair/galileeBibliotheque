@@ -40,4 +40,10 @@ public class LivreDaoImpl extends HibernateDaoSupport implements LivreDao{
 		
 		return list;
 	}
+	
+	public int findTypeAccurence(String Type){
+		List list = getHibernateTemplate().find
+				("from Livre where livreType = '"+Type+"'"  );
+		return list.size();
+	}
 }

@@ -28,6 +28,14 @@ public class AdherentDaoImpl extends HibernateDaoSupport implements AdherentDao{
 		getHibernateTemplate().delete(adherent);
 	}
 	
+	public Adherent findByAdherentName(String adherentNom,String adherentPrenom){
+		List listAdherent = getHibernateTemplate().find
+				("from Adherent where adherentNom = '"+adherentNom +"' and adherentPrenom ='"+adherentPrenom+"'");
+		
+		return (Adherent)listAdherent.get(0);
+		 
+	}
+	
 	public Adherent findByAdherentId(Long adherentId){
 		ApplicationContext appContext = new ClassPathXmlApplicationContext
 				("spring/config/BeanLocations.xml");

@@ -17,6 +17,10 @@
     		<column name="LIVRE_AUTEUR" not-null="true"/>
     	</property>
     	
+    	<property name="livreType" type="string">
+    		<column name="LIVRE_TYPE" not-null="true"/>
+    	</property>
+    	
     	<property name="livreCode" type="string">
     		<column name="LIVRE_CODE" not-null="true"/>
     	</property>

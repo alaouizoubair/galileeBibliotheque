@@ -26,6 +26,10 @@ public class EmpruntBoImpl implements EmpruntBo{
 		empruntDao.delete(emprunt);
 	}
 
+	public  List<Emprunt> findAll(){
+		return empruntDao.findAll();
+	}
+	
 	public Emprunt findByEmpruntId(Long empruntId) {
 		return empruntDao.findByEmpruntId(empruntId);
 	}
@@ -34,4 +38,7 @@ public class EmpruntBoImpl implements EmpruntBo{
 		return empruntDao.findByEmpruntAdherentId(adherentId);
 	}
 	
+	public  List<Emprunt> findByEmpruntLivreId(Long adherentId){
+		return empruntDao.findByEmpruntLivreId(adherentId);
+	}
 }

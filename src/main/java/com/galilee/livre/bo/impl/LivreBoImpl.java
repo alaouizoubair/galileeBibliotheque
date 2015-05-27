@@ -36,4 +36,8 @@ public class LivreBoImpl implements LivreBo{
 	public List<Livre> findAll(){
 		return livreDao.findAll();
 	}
+	
+	public int findTypeAccurence(String Type){
+		return livreDao.findTypeAccurence(Type);
+	}
 }

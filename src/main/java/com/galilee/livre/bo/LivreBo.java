@@ -12,4 +12,5 @@ public interface LivreBo {
 	Livre findByLivreId(Long livreId);
 	Livre findByLivreTitre(String livreTitre);
 	List<Livre> findAll();
+	int findTypeAccurence(String Type);
 }

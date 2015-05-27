@@ -20,6 +20,13 @@ public class EmpruntDaoImpl extends HibernateDaoSupport implements EmpruntDao{
 		getHibernateTemplate().delete(emprunt);
 	}
 	
+	public List<Emprunt> findAll(){
+		List list = getHibernateTemplate().find
+				("from Emprunt ");
+		
+		return (List<Emprunt>)list;
+	}
+	
 	public Emprunt findByEmpruntId(Long empruntId){
 		List list = getHibernateTemplate().find
 				("from Emprunt where empruntId="+empruntId);
@@ -30,6 +37,13 @@ public class EmpruntDaoImpl extends HibernateDaoSupport implements EmpruntDao{
 	public List<Emprunt> findByEmpruntAdherentId(Long adherentId){
 		List list = getHibernateTemplate().find
 				("from Emprunt where empruntAdherentId="+adherentId);
+		
+		return (List<Emprunt>)list;
+	}
+	
+	public List<Emprunt> findByEmpruntLivreId(Long livreId){
+		List list = getHibernateTemplate().find
+				("from Emprunt where empruntLivreId="+livreId);
 		
 		return (List<Emprunt>)list;
 	}
